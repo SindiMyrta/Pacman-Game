@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A classic arcade maze game built with JavaScript and Canvas.">
+  <title>Pac-Man | Arcade Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Pac-Man home">PAC<span>•</span>MAN</a>
+      <div class="topbar-tag">ARCADE CLASSIC</div>
+    </header>
+
+    <section class="game-shell" aria-label="Pac-Man game">
+      <div class="hud">
+        <div class="hud-item"><span class="hud-label">SCORE</span><strong id="score">0</strong></div>
+        <div class="hud-item"><span class="hud-label">HIGH SCORE</span><strong id="highScore">0</strong></div>
+        <div class="hud-item"><span class="hud-label">LEVEL</span><strong id="level">1</strong></div>
+        <div class="hud-item"><span class="hud-label">LIVES</span><strong id="lives">3</strong></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="600" height="600" aria-label="Pac-Man game board"></canvas>
+        <section id="overlay" class="overlay">
+          <div class="overlay-card">
+            <p class="eyebrow">READY PLAYER ONE</p>
+            <h1 id="overlayTitle">PAC<span>•</span>MAN</h1>
+            <p id="overlayText">Collect the dots, avoid the ghosts, and beat your high score.</p>
+            <div id="overlayActions" class="overlay-actions"></div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="game-footer">
+        <span>MOVE: ARROW KEYS / WASD</span>
+        <span>PAUSE: ESC</span>
+        <span>POWER PELLET: EAT THE GHOSTS</span>
+
+        <button id="fullscreenBtn" class="fullscreen-btn" type="button">
+          ⛶ Fullscreen
+        </button>
+      </footer>
+    </section>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
